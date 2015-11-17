@@ -28,7 +28,7 @@ class BitcoinRPC:
 	def __init__(self, host, port, username, password):
 		authpair = "%s:%s" % (username, password)
 		self.authhdr = "Basic %s" % (base64.b64encode(authpair))
-		self.conn = httplib.HTTPConnection(host, port, False, 30)
+		self.conn = httplib.HTTPConnection(host, port, false, 30)
 	def rpc(self, method, params=None):
 		self.OBJID += 1
 		obj = { 'version' : '1.1',
@@ -171,8 +171,8 @@ class Miner:
 
 		self.max_nonce = long(
 			(hashes_done * settings['scantime']) / time_diff)
-		if self.max_nonce > 0xfffffffaL:
-			self.max_nonce = 0xfffffffaL
+		if self.max_nonce > 0xfffffffal:
+			self.max_nonce = 0xfffffffal
 
 		if settings['hashmeter']:
 			print "HashMeter(%d): %d hashes, %.2f Khash/sec" % (

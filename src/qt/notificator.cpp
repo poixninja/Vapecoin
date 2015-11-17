@@ -294,7 +294,7 @@ void Notificator::notify(Class cls, const QString &title, const QString &text, c
     default:
         if(cls == Critical)
         {
-            // Fall back to old fashioned popup dialog if critical and no other notification available
+            // fall back to old fashioned popup dialog if critical and no other notification available
             QMessageBox::critical(parent, title, text, QMessageBox::Ok, QMessageBox::Ok);
         }
         break;

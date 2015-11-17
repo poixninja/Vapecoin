@@ -43,7 +43,7 @@ class FrameworkInfo(object):
         if self.__class__ == other.__class__:
             return self.__dict__ == other.__dict__
         else:
-            return False
+            return false
     
     def __str__(self):
         return """ Framework name: %s
@@ -185,7 +185,7 @@ class DeploymentInfo(object):
             elif framework.endswith(".dylib"):
                 if framework.startswith(libNameDot):
                     return True
-        return False
+        return false
 
 def getFrameworks(binaryPath, verbose):
     if verbose >= 3:
@@ -556,7 +556,7 @@ try:
         if deploymentInfo.qtPath is None:
             if verbose >= 1:
                 sys.stderr.write("Warning: Could not detect Qt's path, skipping plugin deployment!\n")
-            config.plugins = False
+            config.plugins = false
 except RuntimeError as e:
     if verbose >= 1:
         sys.stderr.write("Error: %s\n" % str(e))
@@ -701,7 +701,7 @@ if config.dmg is not None:
         else:
             bg_path = None
         
-        if fancy.get("applications_symlink", False):
+        if fancy.get("applications_symlink", false):
             os.symlink("/Applications", os.path.join(disk_root, "Applications"))
         
         finder = appscript.app("Finder")
@@ -709,8 +709,8 @@ if config.dmg is not None:
         disk.open()
         window = disk.container_window
         window.current_view.set(appscript.k.icon_view)
-        window.toolbar_visible.set(False)
-        window.statusbar_visible.set(False)
+        window.toolbar_visible.set(false)
+        window.statusbar_visible.set(false)
         if fancy.has_key("window_bounds"):
             window.bounds.set(fancy["window_bounds"])
         view_options = window.icon_view_options
@@ -725,7 +725,7 @@ if config.dmg is not None:
         disk.close()
         if bg_path is not None:
             subprocess.call(["SetFile", "-a", "V", bg_path])
-        disk.update(registering_applications=False)
+        disk.update(registering_applications=false)
         sleep(2)
         disk.eject()
         

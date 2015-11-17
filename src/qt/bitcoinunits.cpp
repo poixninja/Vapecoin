@@ -45,13 +45,13 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("falconcoin");
-    case mBTC: return QString("millifalconcoin (1 / 1,000)");
-    case uBTC: return QString("microfalconcoin (1 / 1,000,000)");
+    case BTC: return QString("Vapecoin");
+    case mBTC: return QString("milliVapecoin (1 / 1,000)");
+    case uBTC: return QString("microVapecoin (1 / 1,000,000)");
     default: return QString("???");
     }
 }
-//a single unit (.00000001) of falconcoin is called a "wander."
+//a single unit (.00000001) of Vapecoin is called a "wander."
 qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)

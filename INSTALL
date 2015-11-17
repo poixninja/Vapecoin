@@ -1,9 +1,9 @@
-Building falconcoin
+Building Vapecoin
 
-See doc/readme-qt.rst for instructions on building falconcoin-qt,
+See doc/readme-qt.rst for instructions on building Vapecoin-qt,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of falconcoin.
+implementation of Vapecoin.
 
-See doc/build-*.txt for instructions on building falconcoin,
+See doc/build-*.txt for instructions on building Vapecoin,
 the intended-for-services, no-graphical-interface, reference
-implementation of falconcoin.
+implementation of Vapecoin.
