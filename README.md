@@ -1,3 +1,3 @@
-falconcoin (FOO)
+falconcoin (FAL)
 
 Blah, blah, blah.
