@@ -1,3 +1,3 @@
-Vapecoin (fal)
+Vapecoin (VAP)
 
 Blah, blah, blah.
